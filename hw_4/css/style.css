@@ -1,0 +1,201 @@
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+.task-one{
+    background-color: #0d5825;
+    height: 600px;
+    margin: 10px;
+    width: 600px;
+}
+
+.quote{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.task-one .text::before{
+    content: "\201c";
+}
+
+.task-one .text::after{
+    content: "\201d";
+}
+
+.set{
+    margin: 25% 0;
+    text-align: center;
+}
+
+.set .left,
+.set .center,
+.set .right{
+    position: relative;
+    transition: top 0.5s ease;
+    width: 150px;
+}
+
+.set .left{
+    left: 95px;
+    top: -5px;
+    transform: rotate(-25deg);
+}
+
+.set .center{
+    right: 5px;
+    top: -3px;
+    transform: rotate(-13deg);
+}
+
+.set .right{
+    right: 102px;
+    top: 13px;
+    transform: rotate(5deg);
+}
+
+.set .card:hover{
+    top: -30px;
+}
+
+.task-two{
+    margin: 10px;
+    width: 600px;
+}
+
+.pink,
+.blue,
+.green{
+    height: 60px;
+    width: 60px;
+}
+
+.pink{
+    background-color: #FF8888;
+    margin: 0 auto;
+    position: relative;
+    right: 25px;
+    top: 25px;
+}
+
+.blue{
+    background-color: #7E8AEB;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.green{
+    background-color: #4DEF99;
+    bottom: 25px;
+    left: 25px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.side-bar{
+    background-color: grey;
+    height: 380px;
+    position: relative;
+    transition: width 0.2s linear;
+    width: 20px;
+}
+
+.side-bar .menu{
+    bottom: 50%;
+    color: white;
+    font-weight: bold;
+    left: 90%;
+    margin: 0;
+    margin: auto;
+    opacity: 1;
+    position: absolute;
+    right: 10%;
+    text-transform: uppercase;
+    top: 50%;
+    transform: rotateZ(90deg);
+    transition: visibility 0.2s linear, opacity 0.2s linear;
+    visibility: visible;
+    white-space: nowrap;
+}
+
+.side-bar:hover{
+    width: 210px;
+}
+
+.side-bar:hover .menu{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu-list{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.menu-list .menu-item{
+    list-style-type: none;
+    position: relative;
+    right: 200px;
+    transition: right 0.2s linear;
+    white-space: nowrap;
+}
+
+.side-bar:hover .menu-item{
+    right: 0px ;
+}
+
+.menu-list .menu-item::before{
+    background-color:orange;
+    border: 1px solid black;
+    content: " ";
+    display: inline-block;
+    height: 11px;
+    transform: rotateZ(45deg);
+    width: 11px;
+}
+
+.menu-list .menu-item .item{
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s linear;
+    white-space: nowrap;
+}
+
+.menu-list .menu-item .item:hover{
+    color: orange;
+}
+
+.animation-area{
+    border: solid 2px black;
+    height: 400px;
+    margin: 10px;
+    position: relative;
+    width: 400px;
+}
+
+.run{
+    animation: go 2.5s linear 0s infinite normal both;
+    background-color:red;
+    display: inline-block;
+    height: 100px;
+    left: 0;
+    margin: 10px;
+    position: relative;
+    top: 0;
+    width: 100px;
+}
+
+@keyframes go{
+   25%{background-color: blue; top: 70%; left: 0;}
+   50%{background-color: green; top: 70%; left: 70%;}
+   75%{background-color: yellow; top: 0; left: 70%;}
+}

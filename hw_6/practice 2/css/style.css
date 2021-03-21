@@ -1,0 +1,145 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+img{
+	max-width: 100vw;
+}
+
+@media (min-width: 320px){
+	footer{
+		background-color: #F7F9EE;
+		min-width: 100vw;
+		margin: 1em 0 0;
+	}
+
+	.footer-text{
+		font-family: 'Oswald', sans-serif;
+		color: #7ea2b3;
+		text-align: center;
+		padding: 0.5em 0;
+		display: block;
+		text-transform: uppercase;
+		margin: 0;
+		font-size:40px;
+		line-height:50px;
+	}
+
+	.reference{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+    .reference-image{
+		display: block;
+		margin-left: auto;
+        margin-right: auto;
+		min-width: calc(100vw - 10%);
+	}
+
+	.reference-name{
+		font-family: 'Dosis', sans-serif;
+		color: #7ea2b3;
+		font-size: 24px;
+		line-height:30px;
+		text-align: center;
+		margin: 0.5em;
+		font-weight: 500;
+	}
+
+	.choose-button{
+		text-transform: uppercase;
+		text-align: center;
+		color: #fff;
+		background-color: #97b621;
+		border: none;
+		outline: none;
+		padding: 0.5em 3em;
+		margin: 0 0 0.5em 0;
+		border-radius: 28px;
+		align-self: center;
+		font-size:13px;
+		line-height:22px;
+		font-family: 'Dosis', sans-serif;
+		font-weight: 700;
+	}
+
+	.tooltip{
+		font-family: 'Dosis', sans-serif;
+		font-weight: 500;
+		Font-size:18px;
+		line-height:35px;
+		visibility: hidden;
+		position: absolute;
+		bottom: 50%;
+		right: 50%;
+		transform: translate(50%, 50%);
+	}
+
+	.hover:hover .tooltip{
+		visibility: visible;
+	}
+
+	.hover{
+		display: block;
+		position: relative;
+		text-align: center;
+		color: #fff;
+	}
+
+	.mask{
+		background-color: rgba(21,51,68, 0);
+		height: 100%;
+		position: absolute;
+		left: 5%;
+		top: 0;
+		display: block;
+		margin-left: auto;
+        margin-right: auto;
+		width: calc(100vw - 10%);
+	}
+
+	.hover:hover .mask{
+		background-color: rgba(21,51,68,0.6);
+	}
+}
+
+@media (min-width: 1024px){
+	footer{
+		display: flex;
+		flex-wrap: wrap;
+		min-width: 100%;
+		justify-content: center;
+	}
+
+	.reference{
+		padding: 10px 0;
+		text-align: center;
+		flex-basis: 280px;
+		flex-shrink: 1;
+		margin: 0 1em;
+	}
+
+	.reference-image{
+		display: block;
+		min-width: 280px;
+		min-height: 280px;
+	}
+
+	.footer-text{
+		text-align: center;
+		width: 100%;
+	}
+
+	.mask{
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: block;
+		width: 100%;
+	}
+}
